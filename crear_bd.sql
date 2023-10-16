@@ -36,6 +36,12 @@ CREATE TABLE IF NOT EXISTS Tarea (
     id_emergencia BIGINT NOT NULL REFERENCES Emergencia(id)
 );
 
+CREATE TABLE IF NOT EXISTS Tarea_X_Voluntario (
+    id_tarea BIGINT NOT NULL REFERENCES Tarea(id),
+    id_voluntario BIGINT NOT NULL REFERENCES Voluntario(id),
+    PRIMARY KEY(id_tarea, id_voluntario)
+);
+
 CREATE TABLE IF NOT EXISTS Estado_Tarea (
     id SERIAL PRIMARY KEY,
     descripcion TEXT,
