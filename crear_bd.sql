@@ -1,3 +1,16 @@
+CREATE TABLE IF NOT EXISTS Institucion (
+    id SERIAL PRIMARY KEY,
+    descripcion TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Coordinador (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    correo VARCHAR(257) NOT NULL,
+    contrasena VARCHAR(257) NOT NULL,
+    institucion_asociada BIGINT NOT NULL REFERENCES Institucion(id)
+);
+
 CREATE TABLE IF NOT EXISTS Voluntario (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -10,18 +23,13 @@ CREATE TABLE IF NOT EXISTS Habilidad (
     nombre VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Institucion (
-    id SERIAL PRIMARY KEY,
-    descripcion TEXT
-);
-
 CREATE TABLE IF NOT EXISTS Emergencia (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     descripcion TEXT,
     fecha_inicio DATE,
-    fecha_fin DATE,
-    id_institucion BIGINT NOT NULL REFERENCES Institucion(id)
+    fecha_fin DATE DEFAULT(NULL),
+    coordinador_asociado BIGINT NOT NULL REFERENCES Coordinador(id)
 );
 
 CREATE TABLE IF NOT EXISTS Estado_Tarea (
