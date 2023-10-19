@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS Tarea (
 CREATE TABLE IF NOT EXISTS Tarea_X_Voluntario (
     id_tarea BIGINT NOT NULL REFERENCES Tarea(id),
     id_voluntario BIGINT NOT NULL REFERENCES Voluntario(id),
+    completada BOOLEAN DEFAULT(FALSE),
     PRIMARY KEY(id_tarea, id_voluntario)
 );
 
