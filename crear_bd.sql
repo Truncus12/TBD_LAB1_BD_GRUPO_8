@@ -24,6 +24,11 @@ CREATE TABLE IF NOT EXISTS Emergencia (
     id_institucion BIGINT NOT NULL REFERENCES Institucion(id)
 );
 
+CREATE TABLE IF NOT EXISTS Estado_Tarea (
+    id INT PRIMARY KEY,
+    descripcion TEXT
+);
+
 CREATE TABLE IF NOT EXISTS Tarea (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -39,14 +44,8 @@ CREATE TABLE IF NOT EXISTS Tarea (
 CREATE TABLE IF NOT EXISTS Tarea_X_Voluntario (
     id_tarea BIGINT NOT NULL REFERENCES Tarea(id),
     id_voluntario BIGINT NOT NULL REFERENCES Voluntario(id),
-    completada BOOLEAN DEFAULT(FALSE),
+    estado INT NOT NULL DEFAULT(1) REFERENCES Estado_Tarea(id),
     PRIMARY KEY(id_tarea, id_voluntario)
-);
-
-CREATE TABLE IF NOT EXISTS Estado_Tarea (
-    id SERIAL PRIMARY KEY,
-    descripcion TEXT,
-    id_tarea BIGINT NOT NULL REFERENCES Tarea(id)
 );
 
 CREATE TABLE IF NOT EXISTS Ranking (
