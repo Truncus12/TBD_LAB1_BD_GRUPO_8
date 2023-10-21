@@ -2,6 +2,13 @@
 INSERT INTO Estado_Tarea (id, descripcion)
 VALUES (1, 'Pendiente'), (2, 'Terminada'), (3, 'Cancelada');
 
+-- Crea voluntarios
+INSERT INTO Voluntario (id, nombre, correo, contrasena)
+VALUES (1,'Juan', 'juan@gmail.com', '1234'),
+		(2, 'Andrea', 'andrea2@gmail.com', 'contrasena00'),
+		(3, 'Martin', 'martin@gmail.com', '1999'),
+		(4, 'Catalina', 'catal1n4@gmail.com', 'anilatac1');
+
 -- Crea institucion
 INSERT INTO Institucion (id, descripcion)
 VALUES (1,'Equipo de respuestas USACH'),
