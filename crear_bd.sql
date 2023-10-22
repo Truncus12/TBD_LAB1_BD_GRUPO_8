@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS Tarea (
     cant_vol_inscritos INT,
     fecha_inicio DATE,
     fecha_fin DATE,
-    estado_actual CHAR,
+    estado_actual VARCHAR(50),
     id_emergencia BIGINT NOT NULL REFERENCES Emergencia(id)
 );
 

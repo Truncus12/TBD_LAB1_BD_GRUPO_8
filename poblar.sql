@@ -33,10 +33,10 @@ VALUES (1,'Mover arbol', 'Un arbol cayo y bloqueo una calle', '2023-10-23', '202
 -- Crea la tarea
 INSERT INTO Tarea (id, nombre, descripcion, cant_vol_requeridos, cant_vol_inscritos, fecha_inicio, fecha_fin,
 					estado_actual,id_emergencia)
-VALUES (1,'conducir', 'conducir hasta donde cayo el arbol', 1, 0, '2023-10-23','2023-10-24','p',1),
-		(2, 'Rescate', 'Busqueda y rescate de victimas de inundacion', 5, 0, '2023-10-25', '2023-10-26', 'p', 2),
-       	(3, 'Crear refugio', 'Montar refugios temporales', 10, 0, '2023-10-27', '2023-10-28', 'p', 3),
-       	(4, 'Primeros auxilios', 'Primeros auxilios a personas afectadas por el terremoto', 8, 0, '2023-10-29', '2023-10-30', 'p', 4);
+VALUES (1,'conducir', 'conducir hasta donde cayo el arbol', 1, 0, '2023-10-23','2023-10-24','pendiente',1),
+		(2, 'Rescate', 'Busqueda y rescate de victimas de inundacion', 5, 0, '2023-10-25', '2023-10-26', 'pendiente', 2),
+       	(3, 'Crear refugio', 'Montar refugios temporales', 10, 0, '2023-10-27', '2023-10-28', 'pendiente', 3),
+       	(4, 'Primeros auxilios', 'Primeros auxilios a personas afectadas por el terremoto', 8, 0, '2023-10-29', '2023-10-30', 'pendiente', 4);
 
 
 -- Crea tarea x voluntario
