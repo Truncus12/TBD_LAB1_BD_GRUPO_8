@@ -10,7 +10,7 @@ VALUES (1,'Juan', 'juan@gmail.com', '1234'),
 		(4, 'Catalina', 'catal1n4@gmail.com', 'anilatac1');
 
 -- Crea institucion
-INSERT INTO Institucion (id, descripcion)
+INSERT INTO Institucion (id, nombre)
 VALUES (1,'Equipo de respuestas USACH'),
 		(2, 'Equipo de respuesta Metropolitano'),
     	(3, 'Centro comunitario local'),

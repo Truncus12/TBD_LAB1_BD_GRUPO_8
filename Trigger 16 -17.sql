@@ -212,9 +212,9 @@ AFTER DELETE ON voluntario
 FOR EACH ROW
 EXECUTE FUNCTION registro_global_query();
 
---Funcion que genera el reporte de usuarios mas activos
+-- Función que genera el reporte de usuarios más activos
 CREATE OR REPLACE FUNCTION obtener_usuarios_mas_activos()
-RETURNS TABLE (usuario_id TEXT, insert_total INT, update_total INT, delete_total INT) AS $$
+RETURNS TABLE (usuario_id TEXT, insert_total BIGINT, update_total BIGINT, delete_total BIGINT) AS $$
 BEGIN
     RETURN QUERY
     SELECT
