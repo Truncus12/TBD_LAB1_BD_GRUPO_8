@@ -15,7 +15,8 @@ CREATE TABLE IF NOT EXISTS Voluntario (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     correo VARCHAR(257) NOT NULL,
-    contrasena VARCHAR(257) NOT NULL
+    contrasena VARCHAR(257) NOT NULL,
+	geom GEOMETRY(Point, 4326)
 );
 
 CREATE TABLE IF NOT EXISTS Habilidad (
@@ -29,7 +30,8 @@ CREATE TABLE IF NOT EXISTS Emergencia (
     descripcion TEXT,
     fecha_inicio DATE,
     fecha_fin DATE DEFAULT(NULL),
-    coordinador_asociado BIGINT NOT NULL REFERENCES Coordinador(id)
+    coordinador_asociado BIGINT NOT NULL REFERENCES Coordinador(id),
+	geom GEOMETRY(Point, 4326)
 );
 
 CREATE TABLE IF NOT EXISTS Estado_Tarea (
@@ -46,7 +48,8 @@ CREATE TABLE IF NOT EXISTS Tarea (
     fecha_inicio DATE,
     fecha_fin DATE,
     estado_actual VARCHAR(50),
-    id_emergencia BIGINT NOT NULL REFERENCES Emergencia(id)
+    id_emergencia BIGINT NOT NULL REFERENCES Emergencia(id),
+	geom GEOMETRY(Point, 4326)
 );
 
 CREATE TABLE IF NOT EXISTS Tarea_X_Voluntario (
