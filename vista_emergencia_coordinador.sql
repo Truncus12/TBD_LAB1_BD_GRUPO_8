@@ -4,5 +4,5 @@ SELECT
     Emergencia.id,
     Emergencia.nombre,
     Emergencia.descripcion,
-    'Iniciada' AS estado
+    IF(fecha_fin is NULL, 'Iniciada', 'Finalizada') AS estado
 FROM Emergencia
