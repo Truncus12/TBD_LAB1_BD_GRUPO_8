@@ -2,7 +2,7 @@
 
 ## Important
 
-Se debe tener instalado ([PostGIS](https://postgis.net/documentation/getting_started/#installing-postgis)).
+Se debe tener instalado PostGIS ([link](https://postgis.net/documentation/getting_started/#installing-postgis)).
 
 1. **Creación de la Base de Datos:**
    - Abre PgAdmin.
