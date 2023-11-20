@@ -2,7 +2,7 @@
 
 1. **Creación de la Base de Datos:**
    - Abre PgAdmin.
-   - Crea una nueva base de datos llamada 'tbd_lab1'.
+   - Crea una nueva base de datos llamada 'tbd_lab'.
 
 2. **Ejecución de Scripts SQL:**
    - Ejecuta el script 'crear_bd.sql' en la base de datos recién creada(Dentro de este script viene el instalar la extension de postGIS).
