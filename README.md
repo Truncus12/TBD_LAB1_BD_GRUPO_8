@@ -1,8 +1,8 @@
 # Pasos para Configuración de la Base de Datos
 
-## Important
+## Importante
 
-Se debe tener instalado PostGIS ([link](https://postgis.net/documentation/getting_started/#installing-postgis)).
+Antes de comenzar, se debe tener instalado PostGIS ([link](https://postgis.net/documentation/getting_started/#installing-postgis)).
 
 1. **Creación de la Base de Datos:**
    - Abre PgAdmin.
